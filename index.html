@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>SISPA - CRUD Usuarios</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>SISPA – Gestión de Usuarios</h1>
+
+  <div class="container">
+    
+    <h3>Crear / Actualizar Usuario</h3>
+    <input id="id" placeholder="ID (solo para actualizar)" />
+    <input id="nombre" placeholder="Nombre" />
+    <input id="apellido" placeholder="Apellido" />
+    <input id="documento" placeholder="Documento" />
+    <input id="correo" placeholder="Correo institucional" />
+
+    <div class="row">
+      <button onclick="crearUsuario()">Crear</button>
+      <button onclick="actualizarUsuario()">Actualizar</button>
+    </div>
+
+    
+    <h3>Eliminar Usuario</h3>
+    <input id="deleteId" placeholder="ID del usuario" />
+    <button onclick="eliminarUsuario()">Eliminar</button>
+
+    
+    <h3>Usuarios Registrados</h3>
+    <button onclick="listarUsuarios()">Cargar Usuarios</button>
+
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Documento</th>
+          <th>Correo</th>
+        </tr>
+      </thead>
+      <tbody id="tabla"></tbody>
+    </table>
+  </div>
+
+  
+  <script src="script.js"></script>
+</body>
+</html>
+
